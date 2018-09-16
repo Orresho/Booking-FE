@@ -1,16 +1,16 @@
 import React, { Component } from "react";
 import BasePage from '../Basepage';
 
-class TestContainer extends Component {
+class SignUpContainer extends Component {
   render(){
     return (
       <BasePage>
         <div>
-          Hello From TestContainer page on INDEX route
+          <h1>Sign up here</h1>
         </div>
       </BasePage>
     );
   }
 }
 
-export default TestContainer;
+export default SignUpContainer; 

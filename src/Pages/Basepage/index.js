@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Header from "../../Components/Header";
 
 import './style.css';
 
@@ -11,10 +12,9 @@ class BasePage extends Component {
 
 		return (
 			<div className={`BasePage ${className && className}`}>
-				<div>
-				</div>
-				{children}
-				<div>
+				<Header />
+				<div className="main-content-container">
+					{children}
 				</div>
 			</div>
 		);

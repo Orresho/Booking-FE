@@ -1,0 +1,32 @@
+.Header {
+  background-color: #dedede;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-navbar ul {
+  display: flex;
+  float: left;
+}
+
+.main-navbar ul li {
+  margin: 5px 20px;
+  text-decoration: none;
+}
+
+.main-navbar ul li a {
+  text-decoration: none;
+}
+
+.logo-left {
+  margin: 0 15px;
+}
+
+.user-membership-actions-right {
+  margin: 0 15px;
+}
+
+.user-membership-actions-right a {
+  padding: 0 10px;
+}

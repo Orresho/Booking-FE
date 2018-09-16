@@ -1,11 +1,12 @@
 import React, { Component } from "react";
+import BasePage from "../Basepage";
 
 class NotExistPage extends Component {
   render() {
     return (
-      <div>
+      <BasePage>
         <h3>Page does not exist!</h3>
-      </div>
+      </BasePage>
     );
   }
 }
