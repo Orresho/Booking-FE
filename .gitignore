@@ -4,7 +4,7 @@
 /node_modules
 
 # firebase
-/firebase
+firebase/
 
 # testing
 /coverage
