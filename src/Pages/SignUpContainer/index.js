@@ -1,12 +1,16 @@
 import React, { Component } from "react";
 import BasePage from '../Basepage';
 
+import SignUpWidget from "../../Components/SignUp";
+
 class SignUpContainer extends Component {
-  render(){
+  render() {
     return (
       <BasePage>
-        <div>
-          <h1>Sign up here</h1>
+        <div className="signup-container">
+          <div className="Signup-widget">
+            <SignUpWidget heading="Sign up" />
+          </div>
         </div>
       </BasePage>
     );

@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import BasePage from '../Basepage';
+import SignInWidget from "../../Components/SignIn";
 
 class SignInContainer extends Component {
   render(){
     return (
       <BasePage>
-        <div>
-          <h1>Login here</h1>
-        </div>
+        <SignInWidget heading="Sign in" />
       </BasePage>
     );
   }

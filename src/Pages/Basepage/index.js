@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import Header from "../../Components/Header";
 
+// All styles consumed by basepage
 import './style.css';
+import '../../Styles/buttons.css';
+import '../../Styles/Inputs.css';
 
 class BasePage extends Component {
 	render() {

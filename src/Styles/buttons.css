@@ -1,0 +1,20 @@
+
+button {
+  white-space: nowrap;
+  padding: 0 3em;
+  font-size: 1em;
+  line-height: 3em;
+  letter-spacing: -0.3px;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  border-radius: 2px;
+  font-weight: 600;
+  text-shadow: none;
+}
+
+.primary-button {
+  background-color: #dedede;
+}
