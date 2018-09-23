@@ -4,11 +4,19 @@ import './style.css'
 
 class Input extends Component {
   render() {
+    const {
+      type,
+      name,
+      placeholder,
+      onChange,
+      value } = this.props;
 
-    const { type, placeholder } = this.props;
     return (
       <div className="inputWrapper">
-        <input 
+        <input
+          value={value}
+          onChange={onChange}
+          name={name}
           type={type}
           placeholder={placeholder}
         />

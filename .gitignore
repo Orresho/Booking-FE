@@ -4,7 +4,7 @@
 /node_modules
 
 # firebase config
-/config
+/src/_firebaseConfig
 
 # testing
 /coverage

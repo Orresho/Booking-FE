@@ -18,3 +18,10 @@ ul {
   border-radius: 5px;
   border: 1px solid lightgrey;
 }
+
+.errorMessage {
+  color: red;
+  max-width: 260px;
+  text-align: center;
+  margin: 0 auto;
+}
