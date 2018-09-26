@@ -7,6 +7,9 @@ import DocumentationContainer from './Pages/DocumentationContainer';
 import SignInContainer from './Pages/SignInContainer';
 import SignUpContainer from './Pages/SignUpContainer';
 
+// Higher order components
+import withAuthorization from "./HOC/withAuthorization";
+
 
 /**
  * Array of site wide routes imported and uset at App.js file.
@@ -20,12 +23,12 @@ export default [
   {
     path: '/our-vision',
     exact: true,
-    component: OurVisionContainer,
+    component: withAuthorization(OurVisionContainer),
   },
   {
     path: '/about-us',
     exact: true,
-    component: AboutUsContainer,
+    component: withAuthorization(AboutUsContainer),
   },
   {
     path: '/services',

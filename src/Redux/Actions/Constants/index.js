@@ -1,0 +1,3 @@
+export const SIGNIN_START = "SIGNIN_START";
+export const SIGNIN_COMPLETE = "SIGNIN_COMPLETE";
+export const AUTH_USER_SET = "AUTH_USER_SET";
