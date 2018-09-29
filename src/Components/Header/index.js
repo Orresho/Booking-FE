@@ -5,7 +5,7 @@ import navigationConfig from '../../_config/mainNav';
 
 import './style.css';
 
-const Header = () => (
+const Header = ({ isAuthenticated, signOut }) => (
   <div className="Header">
 
     <div className="logo-left">
@@ -26,11 +26,16 @@ const Header = () => (
           ))}
       </ul>
     </div>
-
-    <div className="user-membership-actions-right">
-      <Link to="/sign-up" className="button secondary">Signup</Link>
-      <Link to="/sign-in" className="button primary">Signin</Link>
-    </div>
+    {isAuthenticated ? (
+      <div className="user-membership-actions-right">
+          <Link to="/" onClick={signOut} className="button secondary">Sign Out</Link>
+      </div>
+    ) : (
+        <div className="user-membership-actions-right">
+          <Link to="/sign-up" className="button secondary">Sign up</Link>
+          <Link to="/sign-in" className="button primary">Sign in</Link>
+        </div>
+      )}
   </div>
 )
 

@@ -3,7 +3,7 @@ import BasePage from '../Basepage';
 import SignInWidget from "../../Components/SignIn";
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
-import { SignInAction } from "../../Redux/Actions/user";
+import { SignInAction, SetAuthUser } from "../../Redux/Actions/user";
 
 // Firebase
 import { auth } from "../../firebase";
@@ -22,7 +22,7 @@ class SignInContainer extends Component {
       .then((data) => {
         
         // Pass data as payload to redux store
-        this.props.signIn(data);
+        this.props.setAuthUser(data);
 
         // Redirect to index page
         this.props.history.push('/');
@@ -59,5 +59,7 @@ export default withRouter(connect(
 
   }),
   dispatch => ({
-    signIn: payload => dispatch(SignInAction(payload))
+    signIn: payload => dispatch(SignInAction(payload)),
+    setAuthUser: payload => dispatch(SetAuthUser(payload))
+
   }))(SignInContainer)); 

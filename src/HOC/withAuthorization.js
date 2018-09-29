@@ -1,31 +1,29 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { firebase } from "../firebase";
-import { SetAuthUser } from "../Redux/Actions/user";
 
-export default ComposedComponent => {
+/**
+ * HOC for protecting routes user should not be able to visit based on some state.
+ */
+export default ProtectedComponent => {
   class withAuthorization extends Component {
-
-    componentDidMount(){
-      const { setAuth } = this.props;
-      firebase.auth.onAuthStateChanged(user => setAuth(user));
-    }
-
     render() {
       const { isAuthenticated } = this.props;
-      if (!isAuthenticated) return null;
-
-      return (
-        <ComposedComponent {...this.props} />
-      );
+      if (isAuthenticated) {
+        return (
+          <div>
+            <p>Cannot access this route!</p>
+          </div>
+        );
+      } else {
+        return (
+          <ProtectedComponent {...this.props} />
+        );
+      }
     }
   }
 
   return connect(
     state => ({
       isAuthenticated: state.user.isAuthenticated,
-    }),
-    dispatch => ({
-      setAuth: payload => dispatch(SetAuthUser(payload))
     }))(withAuthorization);
 };

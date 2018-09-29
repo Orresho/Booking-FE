@@ -23,12 +23,12 @@ export default [
   {
     path: '/our-vision',
     exact: true,
-    component: withAuthorization(OurVisionContainer),
+    component: OurVisionContainer,
   },
   {
     path: '/about-us',
     exact: true,
-    component: withAuthorization(AboutUsContainer),
+    component: AboutUsContainer,
   },
   {
     path: '/services',
@@ -43,12 +43,12 @@ export default [
   {
     path: '/sign-in',
     exact: true,
-    component: SignInContainer,
+    component: withAuthorization(SignInContainer),
   },
   {
     path: '/sign-up',
     exact: true,
-    component: SignUpContainer,
+    component: withAuthorization(SignUpContainer),
   },
   {
     //404 page

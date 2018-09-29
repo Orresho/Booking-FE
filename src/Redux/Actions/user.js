@@ -1,4 +1,7 @@
-import { SIGNIN_START, AUTH_USER_SET } from "./Constants";
+import { 
+  SIGNIN_START, 
+  GET_USER_INFORMATION, 
+  SIGNOUT_COMPLETE } from "./Constants";
 
 export const SignInAction = (payload) => {
   return {
@@ -9,7 +12,13 @@ export const SignInAction = (payload) => {
 
 export const SetAuthUser = (payload) => {
   return {
-    type: AUTH_USER_SET,
+    type: GET_USER_INFORMATION,
     payload,
+  }
+}
+
+export const SignOut = () => {
+  return {
+    type: SIGNOUT_COMPLETE,
   }
 }
