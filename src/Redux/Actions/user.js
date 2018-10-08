@@ -18,7 +18,19 @@ export const SetAuthUser = (payload) => {
 }
 
 export const SignOut = () => {
+  
+  // route to index page with refresh page to reset app state
+  // This could possibly be moved to an epic later on if necessary
+  window.location.replace('/')
+
   return {
     type: SIGNOUT_COMPLETE,
+  }
+}
+
+export const SetUserType = (payload) => {
+  return {
+    type: "SET_USER_TYPE",
+    payload,
   }
 }

@@ -6,6 +6,9 @@ import ServicesContainer from './Pages/ServicesContainer';
 import DocumentationContainer from './Pages/DocumentationContainer';
 import SignInContainer from './Pages/SignInContainer';
 import SignUpContainer from './Pages/SignUpContainer';
+import StudentContainer from './Pages/StudentContainer';
+import TeacherContainer from './Pages/TeacherContainer';
+
 
 // Higher order components
 import withAuthorization from "./HOC/withAuthorization";
@@ -49,6 +52,16 @@ export default [
     path: '/sign-up',
     exact: true,
     component: withAuthorization(SignUpContainer),
+  },
+  {
+    path: '/student',
+    exact: true,
+    component: StudentContainer,
+  },
+  {
+    path: '/teacher',
+    exact: true,
+    component: TeacherContainer,
   },
   {
     //404 page

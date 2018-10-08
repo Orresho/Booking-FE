@@ -4,12 +4,11 @@ import './index.css';
 import App from './Pages/App';
 import registerServiceWorker from './registerServiceWorker';
 import { Provider } from "react-redux";
-import { createStore } from "redux";
 import Cookies from "js-cookie";
 import { UPDATE_AUTHENTICATE } from "./Redux/Actions/Constants";
-import rootReducer from "./Redux/Reducers";
+import configureStore from "./Redux";
 
-const store = createStore(rootReducer);
+const store = configureStore();
 
 if (Cookies.get('sessionId')) {
   store.dispatch({

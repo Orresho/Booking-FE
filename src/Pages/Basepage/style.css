@@ -25,3 +25,11 @@ ul {
   text-align: center;
   margin: 0 auto;
 }
+
+.content-padded {
+  padding: 0 350px;
+}
+.content-wide {
+  padding: 0;
+  width: 100%;
+}

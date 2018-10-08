@@ -1,0 +1,23 @@
+.top-heading {
+  text-align: center;
+}
+
+.realm-options {
+  display: flex;
+}
+
+.realm {
+  width: 50%;
+  text-align: center;
+  margin: 0 2px 0 0;
+  padding: 50px 0;
+  border: 2px solid lightgrey;
+}
+
+.realm:hover {
+  background: #dedede;
+}
+
+.benefits {
+  width: 50%;
+}

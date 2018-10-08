@@ -4,6 +4,8 @@ import * as types from "../Actions/Constants";
 const initialState = {
   isAuthenticated: false,
   isLoading: false,
+  sessionId: null,
+  user: null,
 }
 
 export default (state = initialState, action) => {
@@ -23,12 +25,13 @@ export default (state = initialState, action) => {
     }
     case types.GET_USER_INFORMATION: {
       const sessionId = action.payload.user.uid
+      const payload = {...action.payload}
       Cookies.set('sessionId', sessionId, { expires: 0.10416 });
 
       return {
         ...state,
         sessionId: Cookies.get('sessionId'),
-        user: action.payload,
+        user: payload,
         isAuthenticated: true,
       };
     }
@@ -38,7 +41,6 @@ export default (state = initialState, action) => {
         ...state,
         sessionId: action.sessionId,
         isAuthenticated: true,
-        user: action.payload
       }
     }
 
@@ -49,6 +51,14 @@ export default (state = initialState, action) => {
         isAuthenticated: false,
         sessionId: null,
         user: null,
+      }
+    }
+
+    case "SET_USER_TYPE": {
+      const userType = action.payload;
+      return {
+        ...state,
+        userType: userType,
       }
     }
     default:

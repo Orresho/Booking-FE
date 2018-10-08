@@ -9,7 +9,7 @@ const Header = ({ isAuthenticated, signOut }) => (
   <div className="Header">
 
     <div className="logo-left">
-      Logo here
+      <Link to="/">Logo here</Link>
     </div>
 
     <div className="main-navbar">
