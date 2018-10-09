@@ -51,6 +51,7 @@ export default (state = initialState, action) => {
         isAuthenticated: false,
         sessionId: null,
         user: null,
+        userType: null,
       }
     }
 

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import routes from '../routes';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { generateFonts } from "./FontAwesome";
 
-
+generateFonts();
 // Routes are setup from the imported array of all the routes
 // We iterate throuth the array of routes and pass their props to single Route component
 // Furthur configuration to be done down the line.

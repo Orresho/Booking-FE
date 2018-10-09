@@ -6,9 +6,12 @@ import registerServiceWorker from './registerServiceWorker';
 import { Provider } from "react-redux";
 import Cookies from "js-cookie";
 import { UPDATE_AUTHENTICATE } from "./Redux/Actions/Constants";
-import configureStore from "./Redux";
+import { PersistGate } from 'redux-persist/integration/react'
+import { configureStore } from "./Redux";
+import Loading from './Components/Loading';
 
-const store = configureStore();
+const store = configureStore().store;
+const persistor = configureStore().persistor;
 
 if (Cookies.get('sessionId')) {
   store.dispatch({
@@ -23,7 +26,9 @@ window.reduxStore = store;
 
 const Bootstrap = () => (
   <Provider store={store}>
-    <App />
+    <PersistGate loading={<Loading />} persistor={persistor}>
+      <App />
+    </PersistGate>
   </Provider>
 );
 

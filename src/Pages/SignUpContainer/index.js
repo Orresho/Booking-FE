@@ -24,7 +24,7 @@ class SignUpContainer extends Component {
   }
 
   _handleOnSubmit = (e) => {
-    const { username, email, password, confirmPassword } = this.state;
+    const { email, password } = this.state;
 
     auth.emailAndPasswordUserCreation(email, password)
       .then(() => {
