@@ -46,14 +46,6 @@ export default (state = initialState, action) => {
         userType: null,
       }
     }
-
-    case "SET_USER_TYPE": {
-      const userType = action.payload;
-      return {
-        ...state,
-        userType: userType,
-      }
-    }
     default:
       return state;
   }

@@ -27,10 +27,3 @@ export const SignOut = () => {
     type: SIGNOUT_COMPLETE,
   }
 }
-
-export const SetUserType = (payload) => {
-  return {
-    type: "SET_USER_TYPE",
-    payload,
-  }
-}

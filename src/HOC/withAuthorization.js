@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { Redirect } from "react-router";
 
 /**
  * HOC for protecting routes user should not be able to visit based on some state.
@@ -9,11 +10,8 @@ export default ProtectedComponent => {
     render() {
       const { isAuthenticated } = this.props;
       if (isAuthenticated) {
-        return (
-          <div>
-            <p>Cannot access this route!</p>
-          </div>
-        );
+        /* TODO: Add previous visited url instead */
+        return <Redirect to="/" />
       } else {
         return (
           <ProtectedComponent {...this.props} />
