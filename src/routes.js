@@ -12,6 +12,7 @@ import TeacherContainer from './Pages/TeacherContainer';
 
 // Higher order components
 import withAuthorization from "./HOC/withAuthorization";
+import EventContainer from './Pages/EventContainer';
 
 
 /**
@@ -57,6 +58,11 @@ export default [
     path: '/student',
     exact: true,
     component: StudentContainer,
+  },
+  {
+    path: '/create-event',
+    exact: true,
+    component: EventContainer,
   },
   {
     path: '/teacher',

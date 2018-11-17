@@ -36,14 +36,6 @@ export default (state = initialState, action) => {
       };
     }
 
-    case types.UPDATE_AUTHENTICATE: {
-      return {
-        ...state,
-        sessionId: action.sessionId,
-        isAuthenticated: true,
-      }
-    }
-
     case types.SIGNOUT_COMPLETE: {
       Cookies.remove("sessionId");
       return {

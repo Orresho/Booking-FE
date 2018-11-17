@@ -25,4 +25,10 @@ export default [
     url: 'about-us',
     icon: '',
   },
+  {
+    identifier: 'create-event',
+    title: 'Create Event',
+    url: 'create-event',
+    icon: '',
+  },
 ]
