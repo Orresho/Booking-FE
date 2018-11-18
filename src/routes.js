@@ -6,9 +6,6 @@ import ServicesContainer from './Pages/ServicesContainer';
 import DocumentationContainer from './Pages/DocumentationContainer';
 import SignInContainer from './Pages/SignInContainer';
 import SignUpContainer from './Pages/SignUpContainer';
-import StudentContainer from './Pages/StudentContainer';
-import TeacherContainer from './Pages/TeacherContainer';
-
 
 // Higher order components
 import withAuthorization from "./HOC/withAuthorization";
@@ -55,19 +52,9 @@ export default [
     component: withAuthorization(SignUpContainer),
   },
   {
-    path: '/student',
-    exact: true,
-    component: StudentContainer,
-  },
-  {
     path: '/create-event',
     exact: true,
     component: EventContainer,
-  },
-  {
-    path: '/teacher',
-    exact: true,
-    component: TeacherContainer,
   },
   {
     //404 page

@@ -26,8 +26,11 @@ ul {
   margin: 0 auto;
 }
 
+.divider {
+  padding: 29px 0;
+}
 .content-padded {
-  padding: 0 350px;
+  /* padding: 0 350px; */
 }
 .content-wide {
   padding: 0;

@@ -1,0 +1,35 @@
+@media (min-width: 991px) {
+  .Mobile-Header {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  .Header {
+    display: none;
+  }
+
+  .Mobile-Header {
+    top: 0;
+    color: #fff;
+    background: #2196f3;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+  }
+
+  .mobile-container {
+    padding: 3px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo-wrapper {
+    margin-left: 25px;
+  }
+
+  .drawer {
+    cursor: pointer;
+  }
+}

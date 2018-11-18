@@ -1,32 +1,43 @@
 .Header {
-  background-color: #dedede;
+  background-color: #2196f3;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
 }
 
 .main-navbar ul {
   display: flex;
   float: left;
+  margin: 0;
 }
 
 .main-navbar ul li {
-  margin: 5px 20px;
+  margin: 0 20px;
   text-decoration: none;
 }
 
 .main-navbar ul li a {
   text-decoration: none;
+  color: #fff;
 }
 
-.logo-left {
+.logo-left a {
   margin: 0 15px;
+  color: #fff;
+}
+.drawer-left {
+  color: #fff;
 }
 
 .user-membership-actions-right {
   margin: 0 15px;
 }
-
 .user-membership-actions-right a {
   padding: 0 10px;
+  color: #fff;
+  text-decoration: none;
 }

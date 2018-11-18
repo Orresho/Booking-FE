@@ -11,7 +11,7 @@ const CreateEventWidget = ({ onSubmit, onChange, header }) => (
       <Input 
         placeholder="Enter description"
         onChange={(e) => onChange(e, 'description')} />
-      <button type="submit">Send message</button>
+      <button className="primary-button" type="submit">Send message</button>
     </form>
   </div>
 )

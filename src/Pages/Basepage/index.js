@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 import Header from "../../Components/Header";
 import { connect } from "react-redux";
 import { SignOut } from "../../Redux/Actions/user";
+import MobileHeader from "../../Components/MobileHeader";
+
 // All styles consumed by basepage
+import '../../Styles/base.css'
 import './style.css';
 import '../../Styles/buttons.css';
 import '../../Styles/Inputs.css';
@@ -13,6 +16,10 @@ class BasePage extends Component {
 		this.props.removeUserSession()
 	};
 
+	_handleOpenDrawer = () => {
+		console.log("drawer opened")
+	}
+
 	render() {
 		const { className, children, isAuthenticated } = this.props;
 
@@ -20,10 +27,17 @@ class BasePage extends Component {
 		//...
 
 		return (
-			<div className={`BasePage ${className && className}`}>
+			<div className={`BasePage ${className ? className : ''}`}>
+				<MobileHeader 
+					isAuthenticated={isAuthenticated}
+					signOut={this._handleSignOut}
+					openDrawer={this._handleOpenDrawer} />
 				<Header
 					isAuthenticated={isAuthenticated}
 					signOut={this._handleSignOut} />
+
+				<div className="divider" />
+
 				<div className="main-content-container">
 					{children}
 				</div>
