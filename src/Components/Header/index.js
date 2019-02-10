@@ -32,7 +32,6 @@ const Header = ({ isAuthenticated, signOut }) => (
       </div>
     ) : (
         <div className="user-membership-actions-right">
-          <Link to="/sign-up" className="button secondary">Sign up</Link>
           <Link to="/sign-in" className="button primary">Sign in</Link>
         </div>
       )}

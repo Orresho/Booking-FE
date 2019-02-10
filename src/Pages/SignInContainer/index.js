@@ -14,7 +14,6 @@ class SignInContainer extends Component {
   }
 
   _handleOnSubmit = (e) => {
-    const { email, password } = this.state;
     e.preventDefault();
   }
 
