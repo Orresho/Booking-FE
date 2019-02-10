@@ -1,16 +1,33 @@
 import React from "react";
-import Input from "../../../_CustomFormComponents/NormalInput";
+import Select from 'react-select';
+
+import './style.css';
 
 const Munipacity = () => {
+	const munipacityOptions = [
+		{
+			value: "växjö kommun",
+			label: 'Växjö Kommun',
+		},
+		{
+			value: "malmö Kommun",
+			label: 'Malmö Kommun',
+		},
+		{
+			value: "hultsfred kommun",
+			label: 'Hultsfred Kommun',
+		},
+		{
+			value: "jönköping kommun",
+			label: 'Jönköping Kommun',
+		},
+	];
+	
 	return (
 		<div className="Munipacity">
 			<h2>Select your munipacity</h2>
-			<div className="munipacity-search-bar">
-				<Input />
-			</div>
-
-			<div className="">
-
+			<div className="munipacity-select-bar">
+				<Select options={munipacityOptions}/>
 			</div>
 		</div>
 	);
