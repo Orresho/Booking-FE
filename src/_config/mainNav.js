@@ -2,33 +2,21 @@
 
 export default [
   {
-    identifier: 'services',
-    title: 'Services',
-    url: 'services',
+    identifier: 'user-management',
+    title: 'User Management',
+    url: 'user-management',
     icon: '',
   },
   {
-    identifier: 'our-vision',
-    title: 'Our Vision',
-    url: 'our-vision',
+    identifier: 'event-management',
+    title: 'Event Management',
+    url: 'event-management',
     icon: '',
   },
   {
-    identifier: 'documentation',
-    title: 'Documentation',
-    url: 'documentation',
-    icon: '',
-  },
-  {
-    identifier: 'about-us',
-    title: 'About Us',
-    url: 'about-us',
-    icon: '',
-  },
-  {
-    identifier: 'create-event',
-    title: 'Create Event',
-    url: 'create-event',
+    identifier: 'booking-management',
+    title: 'Booking Management',
+    url: 'booking-management',
     icon: '',
   },
 ]

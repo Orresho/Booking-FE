@@ -1,11 +1,9 @@
 import IndexContainer from './Pages/IndexContainer';
 import NotExistPage from './Pages/404Page';
-import AboutUsContainer from './Pages/AboutUsContainer';
 import OurVisionContainer from './Pages/OurVisionContainer';
 import ServicesContainer from './Pages/ServicesContainer';
 import DocumentationContainer from './Pages/DocumentationContainer';
 import SignInContainer from './Pages/SignInContainer';
-import SignUpContainer from './Pages/SignUpContainer';
 
 // Higher order components
 import withAuthorization from "./HOC/withAuthorization";
@@ -22,22 +20,17 @@ export default [
     component: IndexContainer,
   }, 
   {
-    path: '/our-vision',
+    path: '/event-management',
     exact: true,
     component: OurVisionContainer,
   },
   {
-    path: '/about-us',
-    exact: true,
-    component: AboutUsContainer,
-  },
-  {
-    path: '/services',
+    path: '/user-management',
     exact: true,
     component: ServicesContainer,
   },
   {
-    path: '/documentation',
+    path: '/booking-management',
     exact: true,
     component: DocumentationContainer,
   },
@@ -45,11 +38,6 @@ export default [
     path: '/sign-in',
     exact: true,
     component: withAuthorization(SignInContainer),
-  },
-  {
-    path: '/sign-up',
-    exact: true,
-    component: withAuthorization(SignUpContainer),
   },
   {
     path: '/create-event',
