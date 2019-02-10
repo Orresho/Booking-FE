@@ -4,9 +4,6 @@ import BasePage from '../Basepage';
 import SignUpWidget from "../../Components/SignUp";
 import { withRouter } from "react-router-dom";
 
-// Firebase
-import { auth } from "../../firebase";
-
 class SignUpContainer extends Component {
  
   // Default state of signup fields
@@ -25,21 +22,6 @@ class SignUpContainer extends Component {
 
   _handleOnSubmit = (e) => {
     const { email, password } = this.state;
-
-    auth.emailAndPasswordUserCreation(email, password)
-      .then(() => {
-        // On success we pass a message to local state and redirect user to index page
-        this.setState({ successMessage: "User successfully created", ...this.initial_state })
-        this.props.history.push('/');
-      })
-      .catch(error => {
-        // Show error for only 4 seconds
-        this.setState({ errorMessage: error })
-        setTimeout(() => {
-          this.setState({ errorMessage: '' });
-        }, 4000);
-      });
-
     e.preventDefault();
   }
 

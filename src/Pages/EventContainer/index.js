@@ -3,8 +3,6 @@ import BasePage from '../Basepage';
 import CreateEventWidget from '../../Components/CreateEventWidget';
 import EventListWidget from "../../Components/EventListWidget";
 import { connect } from "react-redux";
-// Firebase actions
-import { createEvent, fetchNewEvents } from "../../firebase/event";
 
 class EventContainer extends Component {
 
@@ -24,13 +22,7 @@ class EventContainer extends Component {
   }
 
   componentDidMount() {
-    fetchNewEvents().limitToLast(10).on('child_added', snapshot => {
-      let eventData = { data: snapshot.val(), id: snapshot.key };
-      this.setState(prevState => ({
-        /* Concat array of new data with old */
-        events: [eventData, ...prevState.events],
-      }));
-    });
+    
   }
 
   _handleSubmitEventCreation = (e) => {
@@ -46,13 +38,6 @@ class EventContainer extends Component {
       title,
       description
     }
-
-    /* Crete new event by posting to firebase DB */
-    createEvent(eventData)
-      .then(() => {
-        console.log('Event created successfully')
-      })
-      .catch(() => console.log('An error occured'))
 
   }
 
