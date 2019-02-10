@@ -5,9 +5,6 @@ import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { SignInAction, SetAuthUser } from "../../Redux/Actions/user";
 
-// Firebase
-import { auth } from "../../firebase";
-
 class SignInContainer extends Component {
 
   state = {
@@ -18,19 +15,6 @@ class SignInContainer extends Component {
 
   _handleOnSubmit = (e) => {
     const { email, password } = this.state;
-    auth.emailAndPasswordUserAuthentication(email, password)
-      .then((data) => {
-        
-        // Pass data as payload to redux store
-        this.props.setAuthUser(data);
-
-        // Redirect to index page
-        this.props.history.push('/');
-      })
-      .catch((error) => {
-        this.setState({ errorMessage: error })
-      })
-
     e.preventDefault();
   }
 
