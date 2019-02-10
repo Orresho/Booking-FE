@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import BasePage from '../Basepage';
 
-class App extends Component {
+class EventManagement extends Component {
   render() {
     return (
       <BasePage>
-        This is where the school paper review searching will be done
+        <h2>Event Management</h2>
       </BasePage>
     );
   }
 }
 
-export default App;
+export default EventManagement;

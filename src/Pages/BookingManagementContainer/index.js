@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import BasePage from '../Basepage';
 
-class App extends Component {
+class BookingManagement extends Component {
   render() {
     return (
       <BasePage>
-        <h3>Our vision will be displayed here</h3>
+        <h2>Booking management</h2>
       </BasePage>
     );
   }
 }
 
-export default App;
+export default BookingManagement;

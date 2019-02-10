@@ -1,18 +1,19 @@
 import React from "react";
-import BannerSlider from "../BannerSlider";
 import Information from "./Information";
+import Munipacity from "./Munipacity";
 
 const Home = () => {
   return (
     <div className="Home">
-      <div className="Banner-section">
-        <BannerSlider />
+      <div>
+        <Munipacity />
       </div>
-
+      <div>
+        <h1>How to use</h1>
+      </div>
       <div className="Information-section">
         <Information />
       </div>
-
     </div>
   );
 }

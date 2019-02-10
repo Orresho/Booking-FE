@@ -2,14 +2,17 @@ import React, { Component } from 'react';
 import BasePage from '../Basepage';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-class App extends Component {
+class UserManagement extends Component {
   render() {
     return (
       <BasePage>
-        Here is some shit icon testing <FontAwesomeIcon icon="spinner" size="2x" spin={true}/>
+        <div>
+          <h2>User Management</h2>
+          <FontAwesomeIcon icon="spinner" size="2x" spin={true}/>
+        </div>
       </BasePage>
     );
   }
 }
 
-export default App;
+export default UserManagement;
